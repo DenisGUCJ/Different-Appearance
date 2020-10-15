@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+
+body {
+  background-color: #262a35;
+}
+
+header {
+  width: 80%;
+  margin: auto;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #2d88ff;
+  height: 5vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header h1 {
+  font-size: 20px;
+}
+
+header h1:hover {
+  cursor: pointer;
+}
+
+header a:hover {
+  cursor: pointer;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+  padding: 0 20px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 95vh;
+}
+
+.main-object {
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  padding: 0 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2d88ff;
+  text-align: justify;
+  -webkit-animation: widen-from-center 1s ease-in-out;
+          animation: widen-from-center 1s ease-in-out;
+  font-size: 40px;
+}
+
+@-webkit-keyframes widen-from-center {
+  0% {
+    width: 0%;
+    font-size: 0;
+  }
+  100% {
+    width: 100%;
+    font-size: 40px;
+  }
+}
+
+@keyframes widen-from-center {
+  0% {
+    width: 0%;
+    font-size: 0;
+  }
+  100% {
+    width: 100%;
+    font-size: 40px;
+  }
+}
+
+.anouncement-text {
+  width: 100%;
+  height: auto;
+  font-size: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-animation: text-animation 1.5s ease-out;
+          animation: text-animation 1.5s ease-out;
+}
+
+.fb-login-button {
+  margin-top: 5vh;
+}
+
+@-webkit-keyframes text-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .anouncement-text h1 {
+    font-size: 30px;
+  }
+  header h1 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .anouncement-text h1 {
+    font-size: 16px;
+  }
+  .anouncement-text a {
+    font-size: 15px;
+  }
+  header h1 {
+    font-size: 12px;
+  }
+  header a {
+    font-size: 10px;
+  }
+  .fb-login-button {
+    content: attr();
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -21,7 +21,7 @@
     padding: 0 20px;
 }
 
-body{
+body {
     background-color: rgb(38, 42, 53);
 }
 
@@ -35,7 +35,7 @@ header {
     h1 {
         font-size: 20px;
     }
-    h1:hover{
+    h1:hover {
         cursor: pointer;
     }
     a:hover{
@@ -43,11 +43,21 @@ header {
     }
 }
 
+.user-state-button {
+    cursor: pointer;
+}
+
+#logout{
+    display: none;
+}
+
+
 main {
     @include justify();
     padding: 0;
     display: flex;
     height: 95vh;
+    //flex-grow: 1;
 }
 
 .main-object {
@@ -64,6 +74,10 @@ main {
     font-size: 40px;
 }
 
+
+.user-name-and-mail{
+    background-color: red;
+}
 
 @keyframes widen-from-center {
     0% {
@@ -90,11 +104,14 @@ main {
     margin-top: 5vh;
 }
 
-@keyframes text-animation{
-    0%{
+@keyframes text-animation {
+    0% {
+    opacity: 0;
+    }
+    40%{
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }

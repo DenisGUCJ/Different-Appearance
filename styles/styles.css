@@ -42,6 +42,14 @@ header a:hover {
   cursor: pointer;
 }
 
+.user-state-button {
+  cursor: pointer;
+}
+
+#logout {
+  display: none;
+}
+
 main {
   width: 80%;
   margin: auto;
@@ -75,6 +83,10 @@ main {
   -webkit-animation: widen-from-center 1s ease-in-out;
           animation: widen-from-center 1s ease-in-out;
   font-size: 40px;
+}
+
+.user-name-and-mail {
+  background-color: red;
 }
 
 @-webkit-keyframes widen-from-center {
@@ -119,6 +131,9 @@ main {
   0% {
     opacity: 0;
   }
+  40% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
@@ -126,6 +141,9 @@ main {
 
 @keyframes text-animation {
   0% {
+    opacity: 0;
+  }
+  40% {
     opacity: 0;
   }
   100% {

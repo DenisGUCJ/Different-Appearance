@@ -44,9 +44,12 @@ function statusChangeCallback(response) {
     console.log(response.status)
     if (response.status === 'connected') {
         console.log('connected')
-        window.location = "user_page.html"
+        setElements(true)
+        useApi();
+        //window.location = "user_page.html"
     } else {
         console.log('does not')
+        setElements(false)
     }
 }
 
@@ -57,8 +60,42 @@ function checkLoginState() {
 
 }
 
-function onFBLogin(){
-    window.location = "user_page.html"
+function setElements(isLogedIn) {
+    if (!isLogedIn) {
+        document.getElementById('login').style.display = 'block';
+        document.getElementById('logout').style.display = 'none';
+        document.querySelector('.main-object').style.display = 'flex'
+    } else {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('logout').style.display = 'block';
+        document.querySelector('.main-object').style.display = 'none'
+    }
+}
+
+function onFBLogin() {
+    console.log('login')
+    setElements(true)
+    useApi();
+}
+
+function FBLogout() {
+    FB.logout(() => {
+        setElements(false)
+    })
+}
+
+function setUserInformation(responce){
+    document.getElementById('name').textContent += responce.name
+    document.getElementById('email').textContent += responce.email
+}
+
+function useApi() {
+    FB.api('/me?fields=name,email', (responce) => {
+        if(responce && !responce.error){
+            console.log(responce)
+            setUserInformation(responce)
+        }
+    })
 }
 
 

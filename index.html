@@ -20,7 +20,8 @@
                 DifferentAppearance
             </h1>
         </div>
-        <a>Login</a>
+        <a id="login" class="user-state-button">Login</a>
+        <a id ="logout" class="user-state-button" onclick="FBLogout()">Logout</a>
     </header>
     <main>
         <section class="main-object">
@@ -34,7 +35,12 @@
                 data-auto-logout-link="false" data-use-continue-as="false" data-width="" onlogin="onFBLogin()"></div>
             </div>
         </section>
-
+        <section class="user-info-container">
+            <div class="user-name-and-mail">
+                <h1 id="name"></h1>
+                <h2 id="email"></h2>
+            </div>
+        </section>
     </main>
 </body>
 

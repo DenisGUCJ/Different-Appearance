@@ -65,10 +65,12 @@ function setElements(isLogedIn) {
         document.getElementById('login').style.display = 'block';
         document.getElementById('logout').style.display = 'none';
         document.querySelector('.main-object').style.display = 'flex'
+        document.querySelector('.user-info-container').style.display = 'none'
     } else {
         document.getElementById('login').style.display = 'none';
         document.getElementById('logout').style.display = 'block';
         document.querySelector('.main-object').style.display = 'none'
+        document.querySelector('.user-info-container').style.display = 'block'
     }
 }
 
